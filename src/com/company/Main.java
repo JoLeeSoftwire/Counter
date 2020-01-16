@@ -1,5 +1,7 @@
 package com.company;
 
+import java.awt.desktop.SystemEventListener;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -31,6 +33,7 @@ public class Main {
         cart.add(box2);
         cart.add(box3);
         System.out.println("There are "+cart.getCount()+" things in our cart (should be 8)");
+        cart.wheelAlong();
 
         Counter<DayOfChristmas> gifts = new Counter<>();
         DayOfChristmas firstDay = new DayOfChristmas(1);
@@ -40,6 +43,19 @@ public class Main {
         gifts.add(eighthDay);
         gifts.add(ninthDay);
         System.out.println("This year my true love gave a total of "+gifts.getCount()+" gifts :O");
+
+        Counter<Countable> vagueCounter = new Counter();
+        vagueCounter.add(new Apple());
+        vagueCounter.add(new DayOfChristmas(2));
+        vagueCounter.add(new DayOfChristmas(12));
+        vagueCounter.add(new Box());
+        Box boxB = new Box();
+        boxB.add(new Apple());
+        boxB.add(2);
+        boxB.add(new DayOfChristmas(11));
+        vagueCounter.add(cart);
+        vagueCounter.add(boxB);
+        System.out.println("vague counter can see "+vagueCounter.getCount()+" things");
 
     }
 }

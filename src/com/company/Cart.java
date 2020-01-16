@@ -14,6 +14,15 @@ public class Cart implements Countable {
         boxes.add(b);
     }
 
+    public void wheelAlong() {
+        System.out.println("pushing cart");
+        if(Math.random() < 0.8) {
+            System.out.println("wheeee");
+        } else {
+            System.out.println("rats! this one has a wonky wheel");
+        }
+    }
+
     @Override
     public int getCount() {
         return boxes.stream().mapToInt(b -> b.getCount()).sum();
