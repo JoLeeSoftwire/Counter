@@ -1,9 +1,14 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Box<T> implements Countable {
     private List<T> items;
+
+    public Box() {
+        items = new ArrayList<>();
+    }
 
     @Override
     public int getCount() {

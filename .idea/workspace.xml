@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a4b96a5-a7b4-4cb8-89b5-93b5201d8e72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Apple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Box.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Cart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Counter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Counter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +52,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -75,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579170227104</updated>
-      <workItem from="1579170230679" duration="1268000" />
+      <workItem from="1579170230679" duration="2067000" />
     </task>
     <servers />
   </component>
