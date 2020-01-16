@@ -3,7 +3,7 @@ package com.company;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Counter<T> {
+public class Counter<T extends Countable> {
     private List<T> items;
 
     public Counter() {
@@ -15,6 +15,7 @@ public class Counter<T> {
     }
 
     public int getCount() {
-        return items.size();
+        var total = items.stream().map(i -> i.getCount()).reduce((a,b) -> a+b);
+        return  total.isPresent() ? total.get() : 0;
     }
 }
