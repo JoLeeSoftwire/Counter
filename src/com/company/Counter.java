@@ -6,10 +6,6 @@ import java.util.List;
 public class Counter<T extends Countable> {
     private List<T> items;
 
-    public Counter() {
-        items = new ArrayList<>();
-    }
-
     public void add(T item) {
         items.add(item);
     }
