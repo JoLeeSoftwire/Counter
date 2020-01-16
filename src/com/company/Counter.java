@@ -15,7 +15,6 @@ public class Counter<T extends Countable> {
     }
 
     public int getCount() {
-        var total = items.stream().map(i -> i.getCount()).reduce((a,b) -> a+b);
-        return  total.isPresent() ? total.get() : 0;
+        return items.stream().mapToInt(i -> i.getCount()).sum();
     }
 }

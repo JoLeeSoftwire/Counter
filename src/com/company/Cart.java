@@ -16,7 +16,6 @@ public class Cart implements Countable {
 
     @Override
     public int getCount() {
-        var total = boxes.stream().map(b -> b.getCount()).reduce((x,y) -> x+y);
-        return  total.isPresent() ? total.get() : 0;
+        return boxes.stream().mapToInt(b -> b.getCount()).sum();
     }
 }

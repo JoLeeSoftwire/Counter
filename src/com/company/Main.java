@@ -15,7 +15,7 @@ public class Main {
         System.out.println("We have "+appleCounter.getCount()+" apples (should be 4)");
 
         Counter<Cart> cartCounter = new Counter<>();
-        Cart cart1 = new Cart();
+        Cart cart = new Cart();
         Box box1 = new Box();
         Box box2 = new Box();
         Box box3 = new Box();
@@ -27,9 +27,19 @@ public class Main {
         box2.add(483);
         box3.add(false);
         box3.add("Packet of seeds");
-        cart1.add(box1);
-        cart1.add(box2);
-        cart1.add(box3);
-        System.out.println("There are "+cart1.getCount()+" things in cart 1 (should be 8)");
+        cart.add(box1);
+        cart.add(box2);
+        cart.add(box3);
+        System.out.println("There are "+cart.getCount()+" things in our cart (should be 8)");
+
+        Counter<DayOfChristmas> gifts = new Counter<>();
+        DayOfChristmas firstDay = new DayOfChristmas(1);
+        DayOfChristmas eighthDay = new DayOfChristmas(8);
+        DayOfChristmas ninthDay = new DayOfChristmas(9);
+        gifts.add(firstDay);
+        gifts.add(eighthDay);
+        gifts.add(ninthDay);
+        System.out.println("This year my true love gave a total of "+gifts.getCount()+" gifts :O");
+
     }
 }
