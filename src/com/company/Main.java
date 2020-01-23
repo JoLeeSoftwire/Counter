@@ -4,15 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
         Counter<Apple> appleCounter = new Counter<>();
+        Counter<Apple> redAppleCounter = new Counter<>(a -> a.getColour() == Colour.Red);
         Apple a1 = new Apple(Colour.Red);
         Apple a2 = new Apple(Colour.Red);
         Apple a3 = new Apple(Colour.Red);
-        Apple a4 = new Apple(Colour.Red);
-        appleCounter.add(a1);
-        appleCounter.add(a2);
-        appleCounter.add(a3);
-        appleCounter.add(a4);
+        Apple a4 = new Apple(Colour.Green);
+        appleCounter.add(a1); redAppleCounter.add(a1);
+        appleCounter.add(a2); redAppleCounter.add(a2);
+        appleCounter.add(a3); redAppleCounter.add(a3);
+        appleCounter.add(a4); redAppleCounter.add(a4);
         System.out.println("We have "+appleCounter.getCount()+" apples (should be 4)");
+        System.out.println("We have "+redAppleCounter.getCount()+" red apples (should be 3)");
 
         Counter<Cart> cartCounter = new Counter<>();
         Cart cart = new Cart();

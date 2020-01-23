@@ -1,6 +1,6 @@
 package com.company;
 
-enum Colour {
+public enum Colour {
     Red,
     Green,
     Yellow,
