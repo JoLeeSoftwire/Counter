@@ -23,6 +23,6 @@ public class Counter<T extends Countable> {
     }
 
     public int getCount() {
-        return items.stream().mapToInt(Countable::getCount).sum();
+        return items.stream().filter(doCount).mapToInt(Countable::getCount).sum();
     }
 }
