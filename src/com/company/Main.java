@@ -1,15 +1,13 @@
 package com.company;
 
-import java.awt.desktop.SystemEventListener;
-
 public class Main {
 
     public static void main(String[] args) {
         Counter<Apple> appleCounter = new Counter<>();
-        Apple a1 = new Apple();
-        Apple a2 = new Apple();
-        Apple a3 = new Apple();
-        Apple a4 = new Apple();
+        Apple a1 = new Apple(Colour.Red);
+        Apple a2 = new Apple(Colour.Red);
+        Apple a3 = new Apple(Colour.Red);
+        Apple a4 = new Apple(Colour.Red);
         appleCounter.add(a1);
         appleCounter.add(a2);
         appleCounter.add(a3);
@@ -18,13 +16,13 @@ public class Main {
 
         Counter<Cart> cartCounter = new Counter<>();
         Cart cart = new Cart();
-        Box box1 = new Box();
-        Box box2 = new Box();
-        Box box3 = new Box();
+        Box<Object> box1 = new Box<>();
+        Box<Object> box2 = new Box<>();
+        Box<Object> box3 = new Box<>();
         box1.add(2);
         box1.add(4);
         box1.add(12);
-        box2.add(new Apple());
+        box2.add(new Apple(Colour.Red));
         box2.add("Turtle Dove");
         box2.add(483);
         box3.add(false);
@@ -44,13 +42,13 @@ public class Main {
         gifts.add(ninthDay);
         System.out.println("This year my true love gave a total of "+gifts.getCount()+" gifts :O");
 
-        Counter<Countable> vagueCounter = new Counter();
-        vagueCounter.add(new Apple());
+        Counter<Countable> vagueCounter = new Counter<>();
+        vagueCounter.add(new Apple(Colour.Green));
         vagueCounter.add(new DayOfChristmas(2));
         vagueCounter.add(new DayOfChristmas(12));
-        vagueCounter.add(new Box());
-        Box boxB = new Box();
-        boxB.add(new Apple());
+        vagueCounter.add(new Box<>());
+        Box<Object> boxB = new Box<>();
+        boxB.add(new Apple(Colour.Red));
         boxB.add(2);
         boxB.add(new DayOfChristmas(11));
         vagueCounter.add(cart);
